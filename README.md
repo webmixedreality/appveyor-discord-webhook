@@ -28,20 +28,13 @@ status.
 
     ```yaml
     on_success:
-      - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHooks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
+      - ps: Invoke-RestMethod https://raw.githubusercontent.com/webmixedreality/appveyor-discord-webhook/master/send.ps1 -o send.ps1
       - ps: ./send.ps1 success $env:WEBHOOK_URL
     on_failure:
-      - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHooks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
+      - ps: Invoke-RestMethod https://raw.githubusercontent.com/webmixedreality/appveyor-discord-webhook/master/send.ps1 -o send.ps1
       - ps: ./send.ps1 failure $env:WEBHOOK_URL
     ```
 
 1.  Grab your coffee ☕ and enjoy! And, if you liked this, please ⭐**Star**
     this repository to show your love.
 
-### Note
--  If you face any issues in the scripts (and you're sure it's not on your side),
-please consider opening an issue and I'll fix it ASAP.
--  If you want to improve the scripts, feel free to open a pull request.
-
-### See Also
--  [Travis CI -> Discord Webhook](https://github.com/DiscordHooks/travis-ci-discord-webhook)
